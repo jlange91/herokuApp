@@ -11,7 +11,7 @@ class DefaultController  extends Controller
     /**
      * @Route("/")
      */
-    public function number()
+    public function index()
     {
         return $this->render('home.html.twig');
     }

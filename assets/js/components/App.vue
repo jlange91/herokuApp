@@ -7,7 +7,7 @@
   export default {
     data() {
       return {
-        message: 'c pas mal'
+        message: 'Hello vue'
       }
     }
   }
