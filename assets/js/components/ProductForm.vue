@@ -33,12 +33,6 @@
           @selected="select"
         />
       </div>
-      <div class="w-full md:w-1/2 px-3">
-        <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          for="grid-state"
-        >Status</label>
-      </div>
       <div class="w-full flex flex-row-reverse mx-4">
         <button @click.prevent="processForm"
           class="uppercase font-bold bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 mb-8 focus:outline-none"
