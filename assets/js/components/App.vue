@@ -1,14 +1,16 @@
 <template>
-  <div id="app">
-    {{ message }}
+  <div>
+      <div class="flex lg:flex-row flex-wrap -mx-2">
+        <product-card />
+      </div>
   </div>
 </template>
 <script>
+import ProductCard from './ProductCard'
+
   export default {
-    data() {
-      return {
-        message: 'Hello vue'
-      }
+    components: {
+      ProductCard
     }
   }
 </script>
