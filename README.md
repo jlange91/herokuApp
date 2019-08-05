@@ -25,6 +25,12 @@ docker build --tag=heroku .
 docker run -p 80:80 -v $PWD/webapp:/var/www heroku
 ```
 
+### Heroku deployement
+
+- Add mysql DB add on for Heroku in your application settings
+- Update your DATABASE_URL value in webapp/.env
+- Follow heroku git deployement instructions: https://devcenter.heroku.com/articles/git 
+
 ### Usage
 
 - Go to http://localhost:80
