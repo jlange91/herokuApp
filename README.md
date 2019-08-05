@@ -22,7 +22,7 @@ docker build --tag=heroku .
 ### Run docker image
 
 ```
-docker run -p 80:80 -v $PWD/webapp:/var/www
+docker run -p 80:80 -v $PWD/webapp:/var/www heroku
 ```
 
 ### Usage
