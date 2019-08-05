@@ -45,14 +45,18 @@ class ProductsController extends ApiController
         if (! $request->get('status')) {
             return $this->respondValidationError('Please provide a description status');
         }
+        if (! $request->get('image')) {
+            return $this->respondValidationError('Please provide a description image');
+        }
 
-        // data validation by regex 
+        // data validation with validator
 
         // persist the new product
         $product = new Product;
         $product->setTitle($request->get('title'));
         $product->setContent($request->get('content'));
         $product->setStatus($request->get('status'));
+        $product->setImage($request->get('image'));
         $product->setCreatedAt(new \Datetime('now', new \DateTimeZone('Europe/Paris')));
         $em->persist($product);
         $em->flush();

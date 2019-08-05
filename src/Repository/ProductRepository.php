@@ -21,10 +21,13 @@ class ProductRepository extends ServiceEntityRepository
 
     public function transform(Product $product)
     {
+        $url_parts = preg_split("/http:\/\/res.cloudinary.com\/jlange-et-dada\/image\/upload/", $product->getImage());   
+        $image = "http://res.cloudinary.com/jlange-et-dada/image/upload/w_214,h_121/" . $url_parts[1];
         return [
                 'id'    => (int) $product->getId(),
                 'title' => (string) $product->getTitle(),
                 'status' => (string) $product->getStatus(),
+                'image' => (string) $image,
                 'content' => (string) $product->getContent(),
                 'created_at' => $product->getCreatedAt()
         ];

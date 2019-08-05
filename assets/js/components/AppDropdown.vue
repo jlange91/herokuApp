@@ -7,7 +7,7 @@
         type="text"
         disabled="true"
         :class="[error ? ' border-red-500' : visible ? 'border-blue-500' : 'border-gray-300', value === 'Choisir un statut' ? 'text-gray-500' : 'text-gray-900']"
-        class="mb-2 appearance-none block w-full bg-white border py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+        class="mb-2 appearance-none block w-full bg-white border py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 rounded"
       />
       <div
         @click="click"
@@ -15,7 +15,6 @@
         style="position:absolute; left:0; right:0; top:0; bottom:0;"
       ></div>
     </div>​
-    <p class="text-red text-sm">{{ message }}</p>
     <div
       class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
     >
@@ -81,11 +80,6 @@ export default {
   watch: {
     value(newValue) {
       this.selectedOption = newValue;
-    }
-  },
-  computed: {
-    message() {
-      if (this.error) return "Veuillez indiquer un statut";
     }
   }
 };

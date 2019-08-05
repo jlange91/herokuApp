@@ -26,6 +26,11 @@ class Product
      */
     private $status;
     
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+    
 
     /**
      * @ORM\Column(type="text")
@@ -46,6 +51,11 @@ class Product
     {
         return $this->title;
     }
+   
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
 
     public function getStatus(): ?string
     {
@@ -55,6 +65,13 @@ class Product
     public function setStatus(string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+ 
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
